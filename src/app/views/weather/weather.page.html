@@ -3,19 +3,22 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <ion-title>Weather</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
+      <ion-title size="large">Weather</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
+  <div id="container" class="ion-text-center">
+   <h2> <strong class="capitalize">Clima en RD para {{currentDate}}:</strong></h2>
+   <h3>{{currentWeather()}} Grados Celsius</h3>
+   <h3>{{currentWeatherFahrenheit}} Grados Fahrenheit</h3>
+   
     
   </div>
 </ion-content>

@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Age predicter</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Age predicter</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container" class="ion-text-center">
+    <h2><strong class="capitalize">Age predicter</strong></h2>
+    <ion-text>Ingrese un nombre: </ion-text>
+    <ion-input [(ngModel)]="name"></ion-input>
+
+    <ion-button (click)="isPredicted()">Predecir</ion-button>
+    <ion-button (click)="isNotPredicted()">Reset</ion-button>
+
+    @if(predicted){  
+      @if (age <= 18) {
+         <ion-card>
+  <img alt="children" src="../../../assets/images/child-icon.jpg" />
+  <ion-card-header>
+    <ion-card-title>Usted es: </ion-card-title>
+    <ion-card-subtitle> Joven</ion-card-subtitle>
+  </ion-card-header>
+</ion-card>
+      }     
+      @if (age <= 65) {
+             <ion-card>
+  <img alt="Young people" src="../../../assets/images/young-person-icon.jpg" />
+  <ion-card-header>
+    <ion-card-title>Usted es: </ion-card-title>
+    <ion-card-subtitle> Adulto</ion-card-subtitle>
+  </ion-card-header>
+</ion-card>
+      }     
+      @if (age >= 66) {
+         <ion-card>
+  <img alt="Old people" src="../../../assets/images/old-person-icon.jpg" />
+  <ion-card-header>
+    <ion-card-title>Usted es: </ion-card-title>
+    <ion-card-subtitle> Anciano</ion-card-subtitle>
+  </ion-card-header>
+</ion-card>
+      }     
+     <ion-text ><h2></h2></ion-text>
+    }
+    
+  </div>
+</ion-content>
