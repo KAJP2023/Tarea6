@@ -14,8 +14,13 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">Pokedex</strong>
+  <div id="container" class="ion-text-center">
+    <h2><strong class="capitalize">Pokedex</strong></h2>
+    <ion-text>Ingrese el nombre de un pokémon: </ion-text>
+    <ion-input [(ngModel)]="name"></ion-input>
+
+    <ion-button (click)="isPredicted()">Predecir</ion-button>
+    <ion-button (click)="isNotPredicted()">Reset</ion-button>
     
   </div>
 </ion-content>
