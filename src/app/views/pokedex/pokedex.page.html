@@ -21,6 +21,22 @@
 
     <ion-button (click)="isPredicted()">Predecir</ion-button>
     <ion-button (click)="isNotPredicted()">Reset</ion-button>
+
+    @if (found) {
+      <ion-card>
+  <img alt="{{name}}" src="{{result()?.sprites?.front_default}}" />
+  <ion-card-header>
+    <ion-card-title>{{name}} </ion-card-title>
+    <ion-card-subtitle> Experiencia base: {{result()?.base_experience}}</ion-card-subtitle>
+    <ion-text class="capitalize"><ion-card-subtitle> Habilidad: {{result()?.abilities?.[0]?.ability?.name}}</ion-card-subtitle></ion-text>
+    <ion-card-subtitle> Sonido:</ion-card-subtitle>  <audio controls>
+  <source src="{{result()?.cries?.latest}}" type="audio/ogg">
+  <source src="{{result()?.cries?.latest}}" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> 
+  </ion-card-header>
+</ion-card>
+    }
     
   </div>
 </ion-content>
