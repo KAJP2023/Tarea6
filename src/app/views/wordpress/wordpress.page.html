@@ -14,8 +14,26 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">WordPress</strong>
-    
+  <div id="container" class="ion-text-center">
+    <h2><strong class="capitalize">Tres últimas noticias de TechCrunch: </strong></h2>
+    <ion-img src="../../../assets/images/TechCrunch_logo.png"></ion-img>
+       <ion-card>
+  <ion-card-header>
+    <ion-card-title>{{result[0]?.title?.rendered}}</ion-card-title>
+    <ion-card-subtitle> {{result[0]?.excerpt?.rendered}}</ion-card-subtitle>
+  </ion-card-header>
+</ion-card>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>{{result[1]?.title?.rendered}}</ion-card-title>
+    <ion-card-subtitle> {{result[1]?.excerpt?.rendered}}</ion-card-subtitle>
+  </ion-card-header>
+</ion-card>
+<ion-card>
+  <ion-card-header>
+   <ion-card-title>{{result[2]?.title?.rendered}}</ion-card-title>
+    <ion-card-subtitle> {{result[2]?.excerpt?.rendered}}</ion-card-subtitle>
+  </ion-card-header>
+</ion-card>
   </div>
 </ion-content>
